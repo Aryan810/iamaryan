@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script> -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,14 +12,18 @@
 
 <body>
 
+  <div class="titlenav">
+    <div class="title"><span id=titletext></span></div> 
+  </div>
+
   <dev id="main">
 
     <div class="menu">
       <ul>
-        <li>Home</li>
-        <li>My Projects</li>
-        <li>Contacts</li>
-        <li>My Details</li>
+        <li><a href="../projects.html" target="_blank">Home</a></li>
+        <li><a href="../projects.html" target="_blank">My Projects</a></li>
+        <li><a href="../projects.html" target="_blank">Contacts</a></li>
+        <li><a href="../projects.html" target="_blank">My Details</a></li>
       </ul>
     </div>
 
@@ -34,6 +39,13 @@
           <div id="whatiam">
             A Student, Programmer and Designer
           </div>
+          <dev id="moreabout">
+            <span id="spanmoreabout"></span>
+          </dev>
+          <div class="btns">
+            <input type="button" value="My Projects">
+            <input type="button" value="Contact Me">
+          </div>
         </dev>
 
         <dev class="mypic" style="border-width: 7px">
@@ -46,21 +58,34 @@
   </dev>
 
 
-  <!-- 
-  <script>
-    var typed = new Typed('#typed', {
-      strings: ["Welcome To AryanGupta.in ", "You can download my projets from here!"],
-      backSpeed: 34,
-      smartBackspace: true,
-      backDelay: 3500,
-      startDelay: 500,
-      typeSpeed: 34,
-      loop: true,
 
+  <script>
+    var typed = new Typed('#spanmoreabout', {
+      strings: ["I am currently studying in class 10",
+                "at St. Joseph's International School",
+                "I live in Jhalawar, Rajesthan"],
+      backSpeed: 33,
+      smartBackspace: true,
+      backDelay: 4000,
+      startDelay: 2000,
+      typeSpeed: 33,
+      loop: true,
     });
 
-  </script> -->
+  </script>
 
+<script>
+  var typed = new Typed('#titletext', {
+    strings: ["Welcome To AryanGupta.in"],
+    backSpeed: 33,
+    smartBackspace: true,
+    backDelay: 4000,
+    startDelay: 2000,
+    typeSpeed: 33,
+    loop: false,
+  });
+
+</script>
 
   <!-- <script src="js\index.js"></script> -->
 </body>

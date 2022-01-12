@@ -2,17 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@402&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 
 *{
   margin: 0px;
+  
 }
+
+body{
+  background-color:  rgba(40, 233, 240, 0.753);
+}
+
+.titlenav{
+  height: 40px;
+  width: 100vw;
+  margin-top: -1px;
+  margin-bottom: 1.6px;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgba(200, 37, 233, 0.562), 20%, #33eb5b9d, 76%  , rgba(200, 62, 241, 0.671));
+
+}
+
+.title{
+  font-size: 1.7em;
+  padding-top: 5px;
+  margin: auto;
+  color: rgba(66, 66, 66, 0.87);
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 297px;
+  text-decoration-color: rgba(0, 0, 0, 0.562);
+  text-decoration: underline
+}
+
 
 #main{
   display: flex;
+  height: 92vh;
 }
 
 .menu{
-  background-color: rgb(78, 199, 189);
+  background-color: rgba(200, 37, 233, 0.562);
   width: 175px;
   height: 100vh;
 }
@@ -26,23 +57,29 @@
 .menu ul li{
   padding: 6vh 0vw;
   font-family: 'Nunito', sans-serif;
+  
+}
 
+
+.menu ul li a{
+  text-decoration: none;
+  color: black;
 }
 
 .infoContainer{
-  width: 85vw;
+  margin-left: 2px;
+  width: 87vw;
   height: 100vh;
   justify-content: center;
-  background-color: rgba(110, 8, 194, 0.432)
+  background-image: linear-gradient(to bottom right, #33eb5b9d, rgba(170, 24, 214, 0.671))
 }
 
 .infoarea{
   display: flex;
   height: 90vh;
   width: 70vw;
-  margin: 17vh;
+  margin: 10vh;
   justify-content: space-around;
-
 }
 
 .info{
@@ -52,12 +89,14 @@
 .mypic img{
   width: 20vw;
   display: inline-block;
-  border: 2px solid rgba(104, 15, 139, 0.514);
-  border-radius: 5px;
 }
 
+.mypic img:hover{
+  border: 0.5px solid black;
+}
 
 #name{
+  display: inline-block;
   font-family: 'Roboto Slab', serif;
   font-size: 3.7em;
 }
@@ -69,18 +108,53 @@
 }
 
 #whatiam{
+  text-decoration: underline;
   margin-top: 10px;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.79em;
 }
 
 
+#moreabout{
+  margin-top: 10px 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.btns{
+  margin-top: 10px;
+}
+.btns input{
+  padding-right: 7px;
+  margin-right: 20px;
+  font-size: 1.5em;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 6px;
+  background-color: transparent;
+  border-image-slice: 1;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btns input:hover{
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
 @media screen and (max-width: 800px){
   /* *{
     background-color: rgb(240, 116, 116);
   } */
+  *{
+    margin: 0% 0%;
+  }
   .infoarea{
     flex-wrap: wrap;
+    margin: auto;
   }
   .menu{
     position: absolute;
@@ -88,8 +162,12 @@
   }
   .infoContainer{
     width: 100vw;
+    height: 100vh;
   }
   .mypic img{
     width: 30vw;
+  }
+  .titlenav{
+    background-image: linear-gradient(to right, #33eb5b9d, 50%  , rgba(200, 62, 241, 0.671));
   }
 }
