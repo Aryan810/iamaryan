@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AryanGupta.in</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="titlenav">
+    <div class="title"><span id=titletext></span></div> 
+  </div>
+
+  <dev id="main"> 
+
+    <div class="menu">
+      <ul>
+        <li><a href="/aryangupta.in/index.html" target="_blank">Home</a></li>
+        <li><a href="/aryangupta.in/projects.html" target="_blank">My Projects</a></li>
+        <li><a href="/aryangupta.in/contact.html" target="_blank">Contacts</a></li>
+        <li><a href="/aryangupta.in/details.html" target="_blank">My Details</a></li>
+      </ul>
+    </div>
+
+    <div class="infoContainer">
+      <dev class="infoarea">
+        <dev class="info">
+          <div id="hiiam">
+            Hi, I am
+          </div>
+          <div id="name">
+            Aryan Gupta
+          </div>
+          <div id="whatiam">
+            A Student, Programmer and Designer
+          </div>
+          <dev id="moreabout">
+            <span id="spanmoreabout"></span>
+          </dev>
+          <div class="btns">
+            <input type="button" id="btn-projects" value="My Projects">
+            <input type="button" value="Contact Me">
+          </div>
+        </dev>
+
+        <dev class="mypic" style="border-width: 7px">
+          <img src="media/img/aryan.png" alt="Aryan Gupta">
+        </dev>
+
+      </dev>
+    </div>
+
+  </dev>
+
+
+
+  <script>
+    var typed = new Typed('#spanmoreabout', {
+      strings: ["I am currently studying in class 10",
+                "at St. Joseph's International School",
+                "I live in Jhalawar, Rajesthan"],
+      backSpeed: 33,
+      smartBackspace: true,
+      backDelay: 4000,
+      startDelay: 2000,
+      typeSpeed: 33,
+      loop: true,
+    });
+
+  </script>
+
+<script>
+  var typed = new Typed('#titletext', {
+    strings: ["Welcome To AryanGupta.in"],
+    backSpeed: 33,
+    smartBackspace: true,
+    backDelay: 4000,
+    startDelay: 2000,
+    typeSpeed: 33,
+    loop: false,
+  });
+
+</script>
+
+  <script src="js\index.js"></script>
+</body>
+
+</html>

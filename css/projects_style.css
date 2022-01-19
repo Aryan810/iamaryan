@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@402&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*{
+    margin: 0px 0px;
+    
+}
+
+body{
+    background-image: linear-gradient('-132deg', rgba(168, 51, 192, 0.562) 40%, rgba(51, 181, 204, 0.822));
+}
+
+.home{
+    position: absolute;
+    width: fit-content;
+    background-color: transparent;
+    margin: 5px 8px;
+}
+
+.home_text{
+    width: fit-content;
+    border: 1px solid rgb(22, 22, 22);
+    font-size: 1.3em;
+    color: rgb(46, 41, 41);
+    border-radius: 4px;
+    padding: 3px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.home_text:hover{
+    color: ghostwhite;
+    border: 1px solid rgb(46, 41, 41);
+    background-color: rgb(22, 22, 22);
+}
+
+.header{
+    margin-top: 5px;
+    width: 100vw;
+}
+
+.title_div{
+    width: fit-content;
+    height: 6vh;
+    margin: auto;
+}
+
+
+.title{
+    font-family: 'Roboto Slab', serif;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 0px 5px;
+    text-decoration: underline;
+    border-radius: 5px;
+    font-size: 2.7em;
+    
+}
+
+.cards{
+    width: 100vw;
+    margin-top: 7vh;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
+.card{
+    border: 2px solid grey;
+    width: 30vw;
+    margin: 5px 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    height: fit-content;
+}
+
+.cardcontent{
+    width: 100%;
+    height: 100%;
+}
+
+.image-div-main{
+    width: 100%;
+}
+
+.image-div{
+    width: fit-content;
+    margin: auto;
+}
+
+.card_text_container{
+    width: 90%;
+    display: flex;
+    margin: 5px auto;
+    height: 155px;
+    align-items: center;
+}
+
+.card_text{
+    height: fit-content;
+    margin: auto;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+}
+
+.card-img{
+    height: 30vh;
+
+}
+
+.card-title-div{
+    width: 100%;
+}
+.card-title{
+    font-size: 1.8em;
+    font-family: 'Barlow Condensed', sans-serif;
+    width: fit-content;
+    text-decoration: underline;
+    margin: auto;
+}
+
+
+.input-group{
+    width: 100%;
+    height: 90%;
+}
+
+.button_box{
+    width: fit-content;
+    margin: auto;
+}
+
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    margin-bottom: 5px;
+    font-size: 1.12em;
+    border: none;
+    width: fit-content;
+  }
+  
+  /* The container <div> - needed to position the dropup content */
+  .dropup {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropup content (Hidden by Default) */
+  .dropup-content {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropup */
+  .dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.1em;
+    display: block;
+  }
+  
+  /* Change color of dropup links on hover */
+  .dropup-content a:hover {background-color: #ddd}
+  
+  /* Show the dropup menu on hover */
+  .dropup:hover .dropup-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropup button when the dropup content is shown */
+  .dropup:hover .dropbtn {
+    background-color: #2980B9;
+  }
+
+  @media screen and (max-width: 1000px){
+    body{
+        height: 100vh;
+    }
+    .row{
+
+        display: inline-block;
+    }
+    .card{
+        width: 65vw;
+        margin: 10px 20px;
+    }
+  }
