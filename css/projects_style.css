@@ -7,12 +7,12 @@
 
 *{
     margin: 0px 0px;
-    
 }
 
 body{
     background-image: linear-gradient('-132deg', rgba(168, 51, 192, 0.562) 40%, rgba(51, 181, 204, 0.822));
 }
+
 
 .home{
     position: absolute;
@@ -28,6 +28,7 @@ body{
     color: rgb(46, 41, 41);
     border-radius: 4px;
     padding: 3px;
+    text-decoration: none;
     font-family: 'Nunito', sans-serif;
 }
 
