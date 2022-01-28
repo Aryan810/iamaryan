@@ -7,46 +7,39 @@
 
 *{
     margin: 0px 0px;
-    border-radius: 3px;
+    border-radius: 0.1px;
 }
 
+:root{
+    --gradient-btn: linear-gradient(
+    45deg, 
+    #845ec2, 
+    #d65db1, 
+    #ff6f91, 
+    #ff9671, 
+    #ffc75f, 
+    #f9f871);
+
+    --gradient-card: linear-gradient(
+    90deg, 
+    rgba(22, 21, 21, 0.87),
+    rgba(22, 21, 21, 0.87),
+    #845ec2d5, 
+    #d65db2d8, 
+    #ff6f91c9);
+}
 
 /*                                                 |Animations|                                                    */
-@keyframes shadow-show{
-    from{box-shadow: 0px 8px 16px 0px rgba(116, 113, 113, 0.2);}
-    to{box-shadow: 0px 8px 16px 0px rgba(26, 25, 25, 0.555);}
-}
-
-@keyframes shadow-back{
-    from{box-shadow: 0px 8px 16px 0px rgba(26, 25, 25, 0.555);}
-    to{box-shadow: 0px 8px 16px 0px rgba(116, 113, 113, 0.2);}
-}
-
-@keyframes white-to-grey{
-    from{
-        background-color: transparent; 
-        color: rgb(46, 41, 41);
+@keyframes bg-move{
+    0%{
+        background-position: left;
     }
-    to{
-        background-color: rgba(33, 240, 161, 0.767);
-        color: black;
+    100%{
+        background-position: right;
     }
 }
-
-
-@keyframes grey-to-white{
-    from{
-        background-color: rgba(33, 240, 161, 0.767);
-        color: black;
-    }
-    to{
-        background-color: transparent; 
-        color: rgb(46, 41, 41);
-    }
-}
-
 body{
-    background-image: linear-gradient(to right, #33eb5b9d, rgba(142, 26, 236, 0.671));
+    background-color: rgba(219, 213, 213, 0.637);
 }
 
 .home{
@@ -57,23 +50,21 @@ body{
 
 .home_text {
     width: fit-content;
-    border: 1px solid rgb(22, 22, 22);
     font-size: 1.3em;
-    color: rgb(46, 41, 41);
-    border-radius: 4px;
-    padding: 3px;
+    color: rgb(34, 32, 32);
+    padding: 4px 5px;
     background-color: transparent;
     text-decoration: none;
+    text-decoration-color: transparent;
     font-family: 'Nunito', sans-serif;
-    animation: grey-to-white;
-    animation-duration: 1s;
+    transition: background-color 1s, color 1s, border 1s, border-radius 1s, text-decoration-color 1s;
 }
 
 .home_text:hover {
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(46, 41, 41);
-    animation: white-to-grey;
-    animation-duration: 1s;
+    color: rgb(70, 68, 68);
+    border-radius: 2px;
+    text-decoration: underline;
+    text-decoration-color: rgb(70, 68, 68);
     background-color: rgba(33, 240, 161, 0.767);
 }
 
@@ -88,36 +79,21 @@ body{
     margin: auto;
 }
 
-@keyframes title-light{
-    from{border-radius: 2px; text-decoration-color: rgba(36, 35, 35, 0.87)}
-    to{border-radius: 4px; text-decoration-color: rgba(0, 0, 0, 0)}
-  }
-
 .title{
     font-family: 'Nunito', sans-serif;
     background-color: transparent;
-    border: 1px solid rgba(36, 35, 35, 0.87);
     padding: 0px 5px;
     color: rgba(36, 35, 35, 0.87);
     text-decoration: underline;
     text-decoration-color: rgba(0, 0, 0, 0);
-    border-radius: 5px;
     font-size: 2.7em;
-    animation: title-light;
-    animation-duration: 0.5s;
+    transition: text-decoration-color 1s, color 1s;
 }
 
-@keyframes title-dark{
-    from{border-radius: 4px; text-decoration-color: rgba(0, 0, 0, 0);}
-    to{border-radius: 2px; text-decoration-color: rgba(36, 35, 35, 0.87);}
-  }
-
 .title:hover{
-    border-radius: 2px;
+    border-radius: 1px;
     text-decoration-color: rgba(36, 35, 35, 0.87);
     color: rgba(36, 35, 35, 0.87);
-    animation: title-dark;
-    animation-duration: 1s;
 }
 
 .cards{
@@ -135,22 +111,17 @@ body{
 }
 
 .card{
-    border: 2px solid grey;
     width: 30vw;
     margin: 5px 20px;
-    box-shadow: 0px 8px 16px 0px rgba(116, 113, 113, 0.2);
-    animation: shadow-back;
-    animation-duration: 1s;
+    box-shadow: 0px 8px 16px 0px rgba(116, 113, 113, 0.473);
+    transition: box-shadow 1s;
     height: fit-content;
-    background-color: rgba(177, 245, 192, 0.589);
     border-radius: 3px;
+    background-color:ghostwhite;
 }
 
 .card:hover{
-    box-shadow: 0px 8px 16px 0px rgba(41, 39, 39, 0.555);
-    animation: shadow-show;
-    animation-duration: 1s;
-    
+    box-shadow: 0px 8px 16px 0px rgba(41, 39, 39, 0.753);
 }
 
 .cardcontent{
@@ -209,23 +180,32 @@ body{
     margin: auto;
 }
 
-
+ 
 .dropbtn {
-    background-color: #3498DB;
-    color: white;
+    color: rgb(26, 24, 24);
     padding: 16px;
     margin-bottom: 5px;
     font-size: 1.12em;
     border: none;
     width: fit-content;
-    border-radius: 4px;
+    background-image: var(--gradient-btn);
+    background-size: 500%;
+    background-position: left;
+    transition: background-position 1s;
+    box-shadow: 1px 0px 5px 1px rgba(109, 107, 107, 0.438);
   }
-  
+
+  .dropbtn:hover{
+       background-position: right;
+  }
+
   /* The container <div> - needed to position the dropup content */
-  .dropup {
+ .dropup {
     position: relative;
     display: inline-block;
   }
+
+  
   
   /* Dropup content (Hidden by Default) */
   .dropup-content {
@@ -233,34 +213,34 @@ body{
     position: absolute;
     bottom: 50px;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 210px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
   /* Links inside the dropup */
   .dropup-content a {
-    color: black;
+    color: transparent;
     padding: 12px 16px;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
-    font-size: 0.96em;
+    font-size: 1.145em;
     display: block;
+    background-image: var(--gradient-card);
+    background-size: 500%;
+    -webkit-background-clip: text;
+    background-position: left;
+    transition: background-position 1s;
   }
   
   /* Change color of dropup links on hover */
-  .dropup-content a:hover {background-color: #ddd}
+  .dropup-content a:hover {background-color: #ddd; background-position: right}
   
   /* Show the dropup menu on hover */
   .dropup:hover .dropup-content {
     display: block;
   }
   
-  /* Change the background color of the dropup button when the dropup content is shown */
-  .dropup:hover .dropbtn {
-    background-color: #2980B9;
-  }
-
   @media screen and (max-width: 1000px){
     body{
         height: 100vh;

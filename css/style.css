@@ -10,6 +10,10 @@
   margin: 0px;
 }
 
+:root{
+  -name-gnt: linear-gradient(to right, rgba(190, 27, 240, 0.788), rgba(58, 25, 241, 0.795));
+}
+
 body{
   background-color:  rgba(40, 233, 240, 0.753);
 }
@@ -127,36 +131,35 @@ body{
   width: 60vw;
 }
 
-@keyframes border-vanish{
-  from{border: 0.5px solid rgba(36, 35, 35, 0.87); border-radius: 1.8px;box-shadow: 0px 8px 16px 0px rgba(88, 88, 88, 0.63);}
-  to{border: 0px solid transparent; border-radius: 0px;box-shadow: 0px 8px 16px 0px transparent;}
-}
-
 .mypic img{
   width: 20vw;
   display: inline-block;
   box-shadow: 0px 8px 16px 0px transparent;
-  animation: border-vanish;
-  animation-duration: 0.5s;
-}
-
-@keyframes border-show{
-  from{border: 0px solid transparent; border-radius: 0px;box-shadow: 0px 8px 16px 0px transparent;}
-  to{border: 0.5px solid rgba(36, 35, 35, 0.87); border-radius: 1.8px;box-shadow: 0px 8px 16px 0px rgba(88, 88, 88, 0.63);}
+  border: 0.5px solid transparent;
+  border-radius: 0.1px;
+  transition: box-shadow 0.5s, border-color 0.5s, border-radius 0.5s;
 }
 
 .mypic img:hover{
   border: 0.5px solid rgba(36, 35, 35, 0.87);
   box-shadow: 0px 8px 16px 0px rgba(88, 88, 88, 0.63);
   border-radius: 1.8px;
-  animation: border-show;
-  animation-duration: 1s;
 }
 
 #name{
   display: inline-block;
   font-family: 'Roboto Slab', serif;
-  font-size: 3.7em;
+  font-size: 3.7rem;
+  background-image: linear-gradient(to right, rgba(140, 29, 245, 0.651), rgba(224, 27, 13, 0.849));
+  -webkit-background-clip: text;
+  background-size: 400%;
+  background-position: left;
+  color: transparent;
+  transition: background-position 5s;
+}
+
+#name:hover{
+  background-position: right;
 }
 
 #hiiam{
@@ -184,10 +187,6 @@ body{
   margin-top: 20px;
 }
 
-@keyframes fill-light{
-  from{color: ghostwhite; background-color: black;}
-  to{color: black; background-color: transparent;}
-}
 
 .btns input{
   padding-right: 7px;
@@ -195,7 +194,6 @@ body{
   margin-bottom: 5px;
   font-size: 1.5em;
   border: 2px solid rgb(0, 0, 0);
-  border-radius: 6px;
   background-color: transparent;
   border-image-slice: 1;
   color: black;
@@ -203,20 +201,13 @@ body{
   font-weight: 700;
   text-decoration: underline;
   cursor: pointer;
-  animation: fill-light;
-  animation-direction: 1s;
+  transition: background-color 0.25s, color 0.25s;
 }
 
-@keyframes fill-dark{
-  from{color: black; background-color: transparent;}
-  to{color: ghostwhite; background-color: black;}
-}
 
 .btns input:hover{
   background-color: black;
   color: rgb(255, 255, 255);
-  animation: fill-dark;
-  animation-direction: 1s;
 }
 
 @media screen and (max-width: 800px){
