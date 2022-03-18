@@ -27,7 +27,7 @@
       <div class="row">
 
         <!-- Khata_Manager -->
-        <div class="card" id="card_1">
+        <div class="card">
           <div class="cardcontent">
 
             <div class="image-div-main">
@@ -95,7 +95,8 @@
                   <div class="dropup-content">
                     <a href="unavailable.html">from mediafire</a>
                     <a href="unavailable.html">from google drive</a>
-                    <a href="https://www.mediafire.com/file/2qaj9war126blc8/Wordpad_sourceCode.zip/file">get source code</a>
+                    <a href="https://www.mediafire.com/file/2qaj9war126blc8/Wordpad_sourceCode.zip/file">get source
+                      code</a>
                   </div>
                 </div>
               </div>
@@ -162,6 +163,21 @@
     });
   </script>
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript">
+
+    $(".card").hover(
+      function mouseIn(event) {
+        // $(".card").css("background-position", "right");
+        console.log("IN >> \n");
+        event.currentTarget.getElementsByClassName("card-title")[0].setAttribute("style", "background-position: right");
+      },
+      function mouseOut(event) {
+        console.log("OUT >> \n");
+        event.currentTarget.getElementsByClassName("card-title")[0].setAttribute("style", "background-position: left");
+      }
+    );
+  </script>
 
 </body>
 

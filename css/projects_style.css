@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@402&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,600&display=swap');
 
 *{
     margin: 0px 0px;
@@ -21,12 +21,26 @@
     #f9f871);
 
     --gradient-card: linear-gradient(
-    90deg, 
-    rgba(22, 21, 21, 0.87),
-    rgba(22, 21, 21, 0.87),
-    #845ec2d5, 
-    #d65db2d8, 
-    #ff6f91c9);
+        90deg, 
+        rgba(22, 21, 21, 0.87),
+        rgba(22, 21, 21, 0.87),
+        #845ec2d5, 
+        #d65db2d8, 
+        #ff6f91c9);
+
+    --gradient-titles:linear-gradient(
+        90deg,
+        #845ec2d5, 
+        #d65db2d8, 
+        #ff6f91c9
+        #ff9671); 
+    
+    --gradient-title: linear-gradient(
+        45deg, 
+        #845ec2, 
+        #d65db1, 
+        #ff6f91, 
+        #ff9671);
 }
 
 /*                                                 |Animations|                                                    */
@@ -38,6 +52,7 @@
         background-position: right;
     }
 }
+
 body{
     background-color: rgba(219, 213, 213, 0.637);
 }
@@ -53,19 +68,21 @@ body{
     font-size: 1.3em;
     color: rgb(34, 32, 32);
     padding: 4px 5px;
-    background-color: transparent;
     text-decoration: none;
-    text-decoration-color: transparent;
     font-family: 'Nunito', sans-serif;
-    transition: background-color 1s, color 1s, border 1s, border-radius 1s, text-decoration-color 1s;
+    border-color: rgba(138, 135, 135, 0.822);
+    box-shadow: 3px 5px 10px rgba(43, 42, 42, 0.253);
+    background-image: var(--gradient-btn);
+    background-size: 500%;
+    background-position: top right;
+    transition: border-radius 1s, background-position 1s;
 }
 
 .home_text:hover {
-    color: rgb(70, 68, 68);
+    color: rgb(34, 32, 32);
+    background-position: bottom left;
     border-radius: 2px;
-    text-decoration: underline;
-    text-decoration-color: rgb(70, 68, 68);
-    background-color: rgba(33, 240, 161, 0.767);
+    background-image: var(--gradient-btn);
 }
 
 .header{
@@ -79,21 +96,33 @@ body{
     margin: auto;
 }
 
+@keyframes bg-animation{ 
+    from{background-position:left;}
+    to{background-position: right;}
+}
+
 .title{
     font-family: 'Nunito', sans-serif;
-    background-color: transparent;
+    /* background-image: linear-gradient(
+        45deg, 
+        #845ec2, 
+        #d65db1, 
+        #ff6f91, 
+        #ff9671); */
+    background-image: var(--gradient-title);
+    background-size: 500%;
+    background-position: left;
+    -webkit-background-clip: text;
     padding: 0px 5px;
-    color: rgba(36, 35, 35, 0.87);
-    text-decoration: underline;
-    text-decoration-color: rgba(0, 0, 0, 0);
+    color: transparent;
     font-size: 2.7em;
-    transition: text-decoration-color 1s, color 1s;
+    transition: font-size 1s;
+    animation: bg-animation 4s infinite alternate;
 }
 
 .title:hover{
     border-radius: 1px;
-    text-decoration-color: rgba(36, 35, 35, 0.87);
-    color: rgba(36, 35, 35, 0.87);
+    font-size: 3em;
 }
 
 .cards{
@@ -161,14 +190,22 @@ body{
 .card-title-div{
     width: 100%;
 }
+
+
 .card-title{
     font-size: 1.8em;
     font-family: 'Barlow Condensed', sans-serif;
     width: fit-content;
     text-decoration: underline;
+    color: transparent;
     margin: auto;
+    background-image: linear-gradient(to right, black, #845ec2, 
+    #d65db1);
+    -webkit-background-clip: text;
+    background-size: 500%;
+    background-position: left;
+    transition: background-position 1s;
 }
-
 
 .input-group{
     width: 100%;

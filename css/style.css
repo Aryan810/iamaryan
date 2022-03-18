@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@402&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed');
 
 
 *{
@@ -62,27 +61,35 @@ body{
 
 #main{
   display: flex;
-  height: 92vh;
+  height: 100vh;
   width: 100vw;
 }
 
 .menu{
   background-color: rgba(51, 238, 60, 0.466);
   width: 175px;
+  display: flex;
   height: 100vh;
+}
+
+.menu-ul{
+  width: 100x;
+  margin: auto;
+  vertical-align: middle;
 }
 
 .menu ul{
-  width: 95px;
+  margin: auto;
+  padding-inline-start: 0px;
   list-style: none;
-  height: 100vh;
 }
 
 
-.menu ul li{
+.menu li{
   padding: 6vh 0vw;
+  margin: auto;
   font-family: 'Nunito', sans-serif;
-  
+  font-size: 1.1em;
 }
 
 @keyframes menu-li-light{
@@ -90,7 +97,7 @@ body{
   to{text-decoration-color: rgba(41, 40, 40, 0);}
 }
 
-.menu ul li a{
+.menu a{
   color: black;
   text-decoration: underline;
   text-decoration-color: rgba(41, 40, 40, 0);
@@ -104,7 +111,7 @@ body{
   to{text-decoration-color: rgba(41, 40, 40, 0.71)}
 }
 
-.menu ul li a:hover{
+.menu a:hover{
   text-decoration: underline;
   text-decoration-color: rgba(41, 40, 40, 0.71); 
   animation: menu-li-dark;
@@ -114,16 +121,18 @@ body{
 .infoContainer{
   margin-left: 2px;
   width: 87vw;
+  display: flex;
   height: 100vh;
   justify-content: center;
   background-image: linear-gradient(to bottom right, #33eb5b9d, rgba(170, 24, 214, 0.671));
 }
 
 .infoarea{
+  margin: auto auto;
   display: flex;
-  height: 90vh;
+  height: 60vh;
   width: 70vw;
-  margin: 10vh;
+  vertical-align: middle;
   justify-content: space-around;
 }
 
@@ -146,25 +155,37 @@ body{
   border-radius: 1.8px;
 }
 
-#name{
-  display: inline-block;
-  font-family: 'Roboto Slab', serif;
-  font-size: 3.7rem;
-  background-image: linear-gradient(to right, rgba(140, 29, 245, 0.651), rgba(224, 27, 13, 0.849));
-  -webkit-background-clip: text;
-  background-size: 400%;
-  background-position: left;
-  color: transparent;
-  transition: background-position 5s;
+@keyframes name_bg_trans{
+  from{
+    background-position: left;
+  }
+  to{
+    background-position: right;
+  }
 }
 
-#name:hover{
-  background-position: right;
+#name{
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 3.7rem;
+  background-image: linear-gradient(
+    to right, 
+    #845ec2, 
+    #d14eaa, 
+    #e26481, 
+    #f0432d);
+  -webkit-background-clip: text;
+  background-size: 500%;
+  background-position: left;
+  color: transparent;
+  animation: name_bg_trans 3s infinite alternate;
 }
 
 #hiiam{
   margin-top: 10vh;
   font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
   font-size: 2.6em;
 }
 
@@ -201,7 +222,7 @@ body{
   font-weight: 700;
   text-decoration: underline;
   cursor: pointer;
-  transition: background-color 0.25s, color 0.25s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 
