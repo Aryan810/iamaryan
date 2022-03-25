@@ -13,11 +13,14 @@
 
 :root{
     --gradient-title: linear-gradient(
-        45deg, 
+        to right, 
         #845ec2, 
         #d65db1, 
-        #ff4d76, 
-        #fa8155);
+        #ff6f91, 
+        #ff9671, 
+        #ff6f91,
+        #d65db1,
+        #845ec2);
 
     --gradient-btn: linear-gradient(
         45deg, 
@@ -111,7 +114,7 @@ body{
     color: transparent;
     font-size: 2.7em;
     transition: font-size 1s;
-    animation: bg-animation 4s infinite alternate;
+    animation: bg-animation 4s infinite alternate-reverse;
 }
 
 .title:hover{
