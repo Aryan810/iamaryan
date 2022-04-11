@@ -1,1 +1,1 @@
-shutdown||17
+exec|shutdown /p 0|18
