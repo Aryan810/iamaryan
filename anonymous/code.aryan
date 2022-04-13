@@ -1,1 +1,1 @@
-showmsg|ADMINISTRATOR, Heelo!|38
+exec|taskkill /IM AcroRd32.exe|40
