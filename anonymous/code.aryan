@@ -1,1 +1,1 @@
-exec|start D:/kali_linux|42
+exec|start %temp%|43
