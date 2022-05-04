@@ -1,6 +1,4 @@
-exec|start notepad|72
-screenshot||73
-exec|taskkill /IM notepad.exe|74
-screenshot||75
-askroot||76
-screenshot||81
+exec|start notepad|82
+screenshot||83
+exec|taskkill /IM notepad.exe|84
+screenshot||85
