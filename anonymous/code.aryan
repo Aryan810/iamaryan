@@ -1,4 +1,1 @@
-exec|start notepad|91
-screenshot||92
-exec|taskkill /IM notepad.exe|93
-screenshot||94
+screenshot||95
