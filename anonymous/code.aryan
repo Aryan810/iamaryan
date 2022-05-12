@@ -1,3 +1,2 @@
-exec|start notepad|107
-exec|$wshell.SendKeys('.............aa.......ss..s.s.s.s.s.s.s')|108
-screenshot||109
+screenshot||110
+campic||111
