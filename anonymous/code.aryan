@@ -1,4 +1,4 @@
 exec|powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Aryan810/aryan810.github.io/master/cia.cpp" -OutFile "%temp%/aaaaaaaaaa.cpp"|114
-exec|notepad %temp%/aaaaaaaaaa.cpp|118
-screenshot||119
-exec|taskkill /IM notepad.exe|120
+exec|powershell.exe ii notepad.exe|121
+screenshot||122
+exec|taskkill /IM notepad.exe|123
