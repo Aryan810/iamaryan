@@ -1,7 +1,6 @@
-camrec|20|37|sanjay
-screenrec|20|38|sanjay
-exec|start notepad.exe|39|sanjay
-type|This computer is being monitored!,By Administrator,2|40|sanjay
-sleep|3|41|sanjay
-exec|taskkill /IM notepad.exe|42|sanjay
-camrec|10|43|sanjay
+camrec|20|45|sanjay
+screenrec|20|46|sanjay
+exec|start notepad.exe|47|sanjay
+type|This computer is being monitored!,By Administrator,0.5|48|sanjay
+sleep|4|49|sanjay
+exec|taskkill /IM notepad.exe|50|sanjay
